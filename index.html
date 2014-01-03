@@ -3,6 +3,32 @@
 <head>
 	<title>Diffbot experiment</title>
 	<link rel="stylesheet" type="text/css" href="static/dist/css/bootstrap.min.css">
+	<style>
+
+	.bar {
+	  fill: steelblue;
+	}
+
+	.bar:hover {
+	  fill: brown;
+	}
+
+	.axis {
+	  font: 10px sans-serif;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
+
+	.x.axis path {
+	  display: none;
+	}
+
+</style>
 </head>
 <body>
 
@@ -56,6 +82,7 @@
 	<script type="text/javascript" src="static/js/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="static/js/underscore-min.js"></script>
 	<script type="text/javascript" src="static/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="static/js/d3.v3.min.js"></script>
 	<script type="text/javascript" src="diffbot.js"></script>
 </body>
 </html>
