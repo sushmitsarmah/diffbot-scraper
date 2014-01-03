@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diffbot experiment</title>
+	<link rel="stylesheet" type="text/css" href="static/dist/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Diffbot output</h1>
+		<form id="url_entry" name="url_entry" role="form">
+			<div class="form-group">
+				<label for="url_scrape">Enter URL</label>
+				<input type="text" class="form-control" id="url_scrape" name="url_scrape" placeholder="Enter URL to be scraped">
+			</div>
+			<div class="form-group">
+				<label for="url_scrape">Enter token</label>
+				<input type="text" class="form-control" id="token" name="token" placeholder="Enter your token">
+			</div>
+			<input type="hidden" class="form-control" id="apiused" name="apiused">
+
+					<!-- Single button -->
+			<div class="btn-group" id="apiselect">
+				<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Select Api <span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu" role="menu">
+					<li><a href="#">Article</a></li>
+					<li><a href="#">Crawlbot</a></li>
+				</ul>
+			</div>
+
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+		<div class="output"></div>
+	</div>
+	<script type="text/javascript" src="static/js/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="static/js/underscore-min.js"></script>
+	<script type="text/javascript" src="static/dist/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="diffbot.js"></script>
+</body>
+</html>
