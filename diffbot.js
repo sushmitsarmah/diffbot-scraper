@@ -20,7 +20,7 @@ $("form").on("submit",function(event){
 });
 
 function getUrl(url,apiselected){
-	$(".output").append("<p>The URL given was <b>"+url+"</b> and api used was <b>"+apiselected+"</b></p>");
+	$(".output").append("<div class='col-md-8'><p>The URL given was <b>"+url+"</b> and api used was <b>"+apiselected+"</b></p></div>");
 	switch(apiselected){
 		case "Article":
 			var data = {
@@ -57,8 +57,8 @@ function afterCrawl(data){
 			$.getJSON(dataurl,function(data){
 				displayData(data);
 			});
-			$(".output").append("<div><a  target='_blank' class='btn btn-primary' href="+dataurl+">Processed data file</a></div>");
-			$(".output").append("<div><a  target='_blank' class='btn btn-primary' href="+csvurl+">Download Urls file</a></div>");
+			$(".downloads").append("<li><a  target='_blank' href="+dataurl+">Download Processed Data</a></li>");
+			$(".downloads").append("<li><a  target='_blank' href="+csvurl+">Download Urls Data</a></li>");
 		} else{
 			useApi(diffbotApi["crawlbot"],{token:token,name:data.jobs[0].name},afterCrawl,"json");
 		}
